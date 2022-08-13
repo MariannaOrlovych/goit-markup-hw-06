@@ -334,28 +334,8 @@ address{
     visibility: hidden;
 }
 
-.modal{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border-radius: 10px;
+/* ----------------BTN----------------- */
 
-    width: 528px;
-    min-height: 581px;
-
-    background-color: #fff;
-    padding: 15px;
-
-    transform: translate(-50%, -50%) scale(1);
-    transition: transform 500ms var(--timing-function), min-height 500ms var(--timing-function) ;
-}
-
-
-.backdrop.is-hidden .modal{
-    transform: translate(-50%, -50%) scale(0);
-    min-height: 0;
-
-}
 
 .hero-btn {
     font-family: inherit;
@@ -728,6 +708,93 @@ address{
 .footer-icons-soc{fill: var(--hero-color);
 }
 
+/* ----------------MODAL FORM----------------- */
+
+textarea{
+    resize: none;
+    width: 448px;
+}
+
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+
+    width: 528px;
+    min-height: 581px;
+
+    background-color: #fff;
+
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 500ms var(--timing-function), min-height 500ms var(--timing-function) ;
+}
+
+
+.backdrop.is-hidden .modal{
+    transform: translate(-50%, -50%) scale(0);
+    min-height: 0;
+}
+
+.form-title{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color:var(--title-text-color);
+    padding-bottom: 12px;
+    padding: 40px 40px 12px 40px;
+}
+.form-field{
+    display: flex;
+    flex-direction: column;
+    margin-bottom:10px;
+    position: relative;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+.form-field label{
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--primary-text-color);
+}
+.form-icon{
+    position: absolute;
+    left:52px;
+    bottom:11px;
+}
+
+.form-field input{
+    margin: 0;
+    padding: 0;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 11px 12px;
+}
+
+.form-field input::placeholder{
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.form-field-link{
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--button-active-color);
+}
+
+.form-field-checkbox{
+    padding: 20px 51px 30px 52px;
+}
+
 /* ----------------PAGE PORTFOLIO----------------- */
 
 /* ----------------HEADER PORTFOLIO----------------- */
@@ -859,4 +926,8 @@ address{
     padding-bottom: 0px;
 }
 
-.portfolio-item{color:var(--primary-backgraund-color);}
+.portfolio-item{
+    color:var(--primary-backgraund-color);
+}
+
+
