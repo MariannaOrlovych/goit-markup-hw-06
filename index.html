@@ -414,32 +414,32 @@
                 <h2 class="form-title">Залиште свої дані, ми вам передзвонимо</h2>
                 <div class="form-field">
                     <label for="name">Ім'я</label>
-                    <input class="form-input" type="text" name="user-name" id="name" autocomplete="name"  placeholder=" " autofocus/>
-                    <span>
+                    <div class="input-wrap">
+                        <input class="form-input" type="text" name="user-name" id="name" autocomplete="name"  placeholder=" " autofocus/>
                         <svg class="form-icon" width="18" height="18">
-                             <use href="./images/icons.svg#icon-person"></use>
+                            <use href="./images/icons.svg#icon-person"></use>
                         </svg>
-                    </span>
+                    </div>
                 </div>
  
                 <div class="form-field">
                     <label for="tel">Телефон</label>
-                    <input class="form-input" type="tel" name="tel" id="tel" placeholder=" "/>
-                    <span>
+                    <div class="input-wrap">
+                        <input class="form-input" type="tel" name="tel" id="tel" placeholder=" "/>
                         <svg class="form-icon" width="18" height="18">
                             <use href="./images/icons.svg#icon-phone"></use>
                         </svg>
-                    </span>
+                    </div>
                 </div>
 
                 <div class="form-field">
                     <label for="email">Пошта</label>
-                    <input class="form-input" type="email" name="email" id="email" placeholder=" "/>
-                    <span>
+                    <div class="input-wrap">
+                        <input class="form-input" type="email" name="email" id="email" placeholder=" "/>
                         <svg class="form-icon" width="18" height="18">
                             <use href="./images/icons.svg#icon-email"></use>
                         </svg>
-                    </span>
+                    </div>
                 </div>
 
                 <div class="form-field form-comment">
@@ -447,24 +447,22 @@
                     <textarea class="comment" name="comment" id="comment" placeholder="Введіть текст"></textarea>
                 </div>
 
-                    <label class="form-field-checkbox"> 
-                        <input class="checkbox" type="checkbox" name="checkbox" value="checkbox"/>
-                        <span class="icon-checkbox">
-                            <svg class="icon-check" width="16" height="15">
-                                <use href="./images/icons.svg#icon-check"></use>
-                            </svg>
-                    </span>
+                <div class="form-field-checkbox">
+                    <label for="checkbox"> 
+                        <input class="checkbox" type="checkbox" name="checkbox" id="checkbox" value="checkbox"/>
+                        <svg class="icon-check" width="16" height="15">
+                             <use href="./images/icons.svg#icon-check"></use>
+                         </svg>
                         Погоджуюся з розсилкою та приймаю  
-                        <a href="#" class="form-field-link">
+                        <a href="#" class="form-checkbox-link">
                             Умови договору
                         </a>
                     </label>
-
-                <div class="form-btn">
-                    <button class="btn-submit" type="submit">Відправити</button>
-
                 </div>
-                
+
+                <div class="btn-sub-send">
+                    <button class="btn-submit" type="submit">Відправити</button>
+                </div>
         
                 <button class="button-x" type="button" data-modal-close>
                     <svg class="button-icon" width="18" height="18">
