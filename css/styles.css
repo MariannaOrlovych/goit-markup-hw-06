@@ -549,12 +549,12 @@ address{
 
 .customer-item-example:hover,
 .customer-item-example:focus{
-    border-color:var(--button-active-color)
+    border-color:var(--button-active-color);
 }
 
 .customer-item-example:hover .customer-icons,
 .customer-item-example:focus .customer-icons{
-    fill:var(--button-active-color)
+    fill:var(--button-active-color);
 }
 
 .customer-item-example:hover,
@@ -725,13 +725,14 @@ address{
     border-radius: 4px;
     background-color: transparent;
     transition: color 250ms var(--timing-function),
-    filter 250ms var(--timing-function);
+    filter 250ms var(--timing-function),
+    border-color 250ms var(--timing-function);
 }
 
-.comment-footer:hover,
 .comment-footer:focus {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     color: var(--hero-color);
+    border-color: var(--button-color);
 }
 
 .comment-footer::placeholder{
@@ -757,18 +758,19 @@ address{
     line-height: 1.88;
     color: var(--hero-color);
     background-color: var(--button-active-color);
-
-    outline: none;
-    border: currentColor;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    outline: var(--button-active-color);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
+    cursor: pointer;
+    transition: color 250ms var(--timing-function), 
+    box-shadow 250ms var(--timing-function);
+}
 
-    transition: color 250ms var(--timing-function);
+.btn-footer-submit:focus{
+outline: var(--button-active-color);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-.footer-submit:hover,
-.footer-submit:focus{
-   border-color: var(--button-active-color);
-}
+
 
 
 .footer-submit-icon{
@@ -802,6 +804,27 @@ textarea{
 }
 
 
+.button-x{
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+   border: 1px solid rgba(0, 0, 0, 0.1);
+   border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.button-x:hover .button-icon,
+.button-x:focus .button-icon{
+    fill: var(--button-active-color);
+}
+
 .backdrop.is-hidden .modal{
     transform: translate(-50%, -50%) scale(0);
     min-height: 0;
@@ -816,6 +839,7 @@ textarea{
     color:var(--title-text-color);
     margin-bottom: 12px;
 }
+
 .form-field{
     display: flex;
     flex-direction: column;
@@ -831,7 +855,8 @@ textarea{
 }
 
 
-.form-field label{
+.imput-title{
+    display: block;
     margin-bottom: 4px;
     font-size: 12px;
     line-height: 1.17;
@@ -846,11 +871,14 @@ textarea{
 }
 
 .form-input{
-    width: 448px;
+    width: 100%;
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding: 12px 12px 12px 42px;
+    font-weight: 12;
+    color: var(--button-text-color);
+    cursor: pointer;
 }
 
 .form-input:focus{
@@ -867,7 +895,6 @@ textarea{
     letter-spacing: 0.01em;
     font-size: 12px;
     color: rgba(117, 117, 117, 0.5);
-
 }
 
 .form-comment{
@@ -875,7 +902,7 @@ textarea{
 }
 
 .comment{
-    width: 448px;
+    width: 100%;
     height: 120px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -885,7 +912,8 @@ textarea{
     line-height: 1.17;
     letter-spacing: 0.01em;
     color: var(--button-text-color);
-
+    cursor: pointer;
+    transition:outline-color 250ms var(--timing-function);
 }
 
 .comment::placeholder{
@@ -900,88 +928,100 @@ textarea{
 }
 
 
-.btn-sub-send{
+.checkbox{
+    -webkit-perspective: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: absolut;
+}
+
+
+
+.check-text{
     display: flex;
+    align-items: center;
     justify-content: center;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--primary-text-color);
+    transition: background-color 250ms var(--timing-function),
+    border 250ms var(--timing-function),
+    border-color 250ms var(--timing-function);
+}
+
+
+.check-text span{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    width: 16px;
+    height: 15px;
+    border:  2px solid var(--button-text-color);
+    border-radius: 3px;
+    margin-right: 7px;
+}
+
+.icon-check{
+    fill: transparent;
+    transition: fill 250ms var(--timing-function);
+}
+
+.checkbox:checked + .check-text span{
+    background-color: var(--button-active-color);
+    border: var(--button-active-color);
+}
+
+.checkbox:checked + .check-text .icon-check {
+   fill: var(--primary-backgraund-color);
+}
+
+
+.checkbox:focus + .check-text span{
+    border-color: var(--button-active-color);
 }
 
 .btn-submit{
     width: 200px;
     height: 50px;
+    display: block;
 
+    margin: 0 auto;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
     color: var(--hero-color);
     background-color: var(--button-active-color);
 
-    border: none;
+    border: transparent;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-
-    transition: color 250ms var(--timing-function)
-}
-
-.button-x{
-    display: flex;
-    align-items: center;
-
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    width: 30px;
-    height: 30px;
-    background-color: #fff;
-   border: 1px solid rgba(0, 0, 0, 0.1);
-   border-radius: 50%;
-    background-color: transparent;
+    transition: outline 250ms var(--timing-function);
+    cursor: pointer;
 }
 
 
+.btn-submit:focus{
+    outline: var(--button-active-color);
+}
 
 .form-field-checkbox{
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    min-width: 400px;
+    width: 100%;
+    height: 24px;
     margin-bottom: 30px;
 }
 
 
-/* .form-checkbox-link{
+.form-checkbox-link{
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--button-active-color);
 }
-
-.checkbox{
-    display: block;
-    border:  4px solid var(--button-text-color);
-    border-radius: 2px;
-}
-
-.icon-check{
-    position: absolute;
-    display: block;
-    top: 50%;
-    left: 13px;
-    transform: translateY(-50%);
-    width: 16px;
-    height: 15px;
-    margin-right: 8px;
-    cursor: pointer;
-    fill: transparent; */
-}
-
-/* .checkbox{
-    -webkit-perspective: none;
-    -moz-appearance: none;
-    appearance: none;
-    position: absolut;
-} */
-
-
-
 
 
 /* ----------------PAGE PORTFOLIO----------------- */
