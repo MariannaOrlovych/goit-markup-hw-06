@@ -643,16 +643,16 @@ address{
 
 .footer-main{
     display: flex;
+    align-items: baseline;
+    justify-content: space-between;
 }
 
 .footer-pre{
     width: 231px;
-    margin-right: 70px;
 }
 
 .footer-after{
     width: 206px;
-    padding-top: 12px;
 }
 
 .footer-after-title{
@@ -694,8 +694,14 @@ address{
 }
 
 .footer-form{
-    padding-left: 93px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 570px;
+    height: 86px;
 }
+
 
 .footer-form-title{
     font-weight: 700;
@@ -704,7 +710,6 @@ address{
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--hero-color);
-    padding-top: 12px;
     margin-bottom: 20px;
 }
 
